@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="live_feed=true" audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element default="192.72.0.1" label="IP address" max_length="40" name="ip_address" type="ip_addr"/>
+        <element label="New field 1" max_length="40" name="new_field_1" type="color"/>
+        <element choice="1" default="100" display="true" label="New Integer" max_length="40" name="u_integer_2" type="integer">
+            <choice>
+                <element inactive_on_update="false" label="100" sequence="0" value="100"/>
+                <element inactive_on_update="false" label="200" sequence="1" value="200"/>
+                <element inactive_on_update="false" label="300" sequence="2" value="300"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="hr" label="Request type" mandatory="true" max_length="40" name="u_request_tyoe" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="IT" sequence="3" value="it"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="macbook pro 16&quot;" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element inactive_on_update="false" label="MacBook Pro 16&quot;" sequence="0" value="macbook pro 16&quot;"/>
+                <element inactive_on_update="false" label="MacBook Pro 13&quot;" sequence="1" value="macbook pro 13&quot;"/>
+                <element inactive_on_update="false" label="iPhone 12 Pro" sequence="2" value="iphone 12 pro"/>
+                <element inactive_on_update="false" label="iPhone 12" sequence="3" value="iphone 12"/>
+                <element inactive_on_update="false" label="iPhone 11S" sequence="4" value="iphone 11s"/>
+                <element inactive_on_update="false" label="Monitor. 19&quot;" sequence="5" value="monitor. 19&quot;"/>
+                <element inactive_on_update="false" label="Fax" sequence="6" value="fax"/>
+                <element inactive_on_update="false" label="Desk" sequence="7" value="desk"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
